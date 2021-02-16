@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta meta name="description" content="Boogie Skate Mag">
-		<title>Contact Submit</title>
+		<title>About Boogie</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -22,17 +22,27 @@
 
 				<!-- Right-aligned links -->
 				<div class="topnav-right">
-					<a href="contact.html">Contact</a>
+					<a href="articles.html">Articles</a>
 					<a href="about.html">About</a>
 				</div>
 				
 			</nav>
 		</header>
 		<main>
-			Welcome <?php echo $_POST["fname"]; ?><br>
-			Your email address is: <?php echo $_POST["email"]; ?>
+		<?php 
+			$fname = $_POST['firstname'];
+			$lname = $_POST['lastname'];
+			$email = $_POST['email'];
+			$message = $_POST['subject'];
+			$formcontent="From: $fname $lname \n Message: $subject";
+			$recipient = "boogieskatemag@gmail.com";
+			$subject = "Contact Form";
+			$mailheader = "From: $email \r\n";
+			mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+			echo "Thank You!";
+		?>
 		</main>
-		<footer id="footer">
+		<footer>
 			<hr>
 			<p>Made in America.<br>Est. 2020<br>Until Infinity</p>
 		</footer>
