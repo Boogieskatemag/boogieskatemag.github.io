@@ -3,12 +3,13 @@ body {
   color:white;
   text-align:center;
   font-size: 1em;
-  font-family: Garamond;
+  font-family: Helvetica;
   margin: 0;
   display: grid;
-  grid-template: grid-template: auto 1fr auto / auto 1fr auto;
+  grid-template: auto 1fr auto / auto 1fr auto;
   height: 100vh;
 }
+
 .header {
 	padding: 2rem;
 	grid-column: 1 / 4;
@@ -19,6 +20,15 @@ body {
 }
 .main{
 	grid-column: 2 / 3;
+	overflow-y: scroll;
+	
+}
+.main p{
+	font-family: Garamond !important;
+	
+}
+.main li{
+		font-family: Garamond !important;
 }
 .right-sidebar {
 	grid-column: 3 / 4;
@@ -79,4 +89,8 @@ body {
     left: 0;
     transform: none;
   }
+}
+article{
+	max-width: 1200px;
+	text-align:justify !important;
 }
