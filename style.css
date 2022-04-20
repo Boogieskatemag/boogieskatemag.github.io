@@ -9,7 +9,10 @@ body {
   grid-template: auto 1fr auto / auto 1fr auto;
   height: 100vh;
 }
-
+article{
+	max-width: 1200px;
+	text-align:justify !important;
+}
 .header {
 	padding: 2rem;
 	grid-column: 1 / 4;
@@ -89,8 +92,4 @@ body {
     left: 0;
     transform: none;
   }
-}
-article{
-	max-width: 1200px;
-	text-align:justify !important;
 }
