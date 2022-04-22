@@ -81,6 +81,9 @@ article{
 
 /* Responsive navigation menu (for mobile devices) */
 @media screen and (max-width: 600px) {
+	article{
+		font-size:1.5em !important;
+	}
   .topnav a, .topnav-right {
     float: none;
     display: block;
